@@ -63,7 +63,7 @@ public class Account implements Serializable {
     private List<AccountRole> accountRoleList;
     @JoinColumn(name = "id", referencedColumnName = "id", insertable = false, updatable = false)
     @OneToOne(optional = false, fetch = FetchType.LAZY)
-    private Employees employees;
+    private Employee employees;
 
     public Account() {
     }
@@ -87,6 +87,11 @@ public class Account implements Serializable {
 
     public void setId(String id) {
         this.id = id;
+    }
+    
+     public Account(String username, String password) {///////tambahan
+        this.username = username;
+        this.password = password;
     }
 
     public String getUsername() {
@@ -138,11 +143,11 @@ public class Account implements Serializable {
         this.accountRoleList = accountRoleList;
     }
 
-    public Employees getEmployees() {
+    public Employee getEmployee() {
         return employees;
     }
 
-    public void setEmployees(Employees employees) {
+    public void setEmployee(Employee employees) {
         this.employees = employees;
     }
 

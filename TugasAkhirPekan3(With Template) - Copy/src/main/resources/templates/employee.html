@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div align="center">Employee Data</div></br></br>
+        <div>
+            <table id="employeetable" class="table table-bordered" width="100%">
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Leave Quota</th>
+                        <th>Is Deleted</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="as : ${employees}">
+                        <td th:text=" ${as.id}"></td>
+                        <td th:text=" ${as.name}"></td> 
+                        <td th:text=" ${as.email}"</td>
+                        <td th:text=" ${as.phoneNumber}"</td>
+                        <td th:text=" ${as.leaveQuota}"</td>
+                        <td th:text=" ${as.isDeleted}"</td>
+                    </tr>
+                </tbody>
+            </table></br></br>
+        </div>
+        </tbody>
+    </body>
+</html>

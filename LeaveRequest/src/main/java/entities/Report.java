@@ -53,7 +53,7 @@ public class Report implements Serializable {
     private int status;
     @JoinColumn(name = "pic", referencedColumnName = "id")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    private Employees pic;
+    private Employee pic;
     @JoinColumn(name = "request", referencedColumnName = "id")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Request request;
@@ -104,11 +104,11 @@ public class Report implements Serializable {
         this.status = status;
     }
 
-    public Employees getPic() {
+    public Employee getPic() {
         return pic;
     }
 
-    public void setPic(Employees pic) {
+    public void setPic(Employee pic) {
         this.pic = pic;
     }
 

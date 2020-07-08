@@ -8,6 +8,7 @@ class LeaveRequestApplicationTests {
 
 	@Test
 	void contextLoads() {
+            System.out.println("RUNNING!!!");
 	}
 
 }

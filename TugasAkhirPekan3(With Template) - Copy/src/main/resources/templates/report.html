@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>History</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div align="center">History of Employee Leave Request</div>
+        <br><table id="reporttable" class="table table-bordered" width="100%">
+                <thead>
+                    <tr>
+                        <th>Report ID</th>
+                        <th>Person In Charge</th>
+                        <th>Request ID</th>
+                        <th>Notes</th>
+                        <th>Date and Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="as : ${reports}">
+                        <td th:text=" ${as.id}"></td>
+                        <td th:text=" ${pic}"></td> 
+                        <td th:text=" ${as.request}"</td>
+                        <td th:text=" ${as.notes}"</td>
+                        <td th:text=" ${as.dateTime}"</td>
+                        <td th:text=" ${as.status}"</td>
+                    </tr>
+                </tbody>
+            </table></br></br>
+    </body>
+</html>

@@ -5,13 +5,15 @@
  */
 package repositories;
 
-import entities.Employees;
+import entities.Employee;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Dhanuaji Pratama
  */
-public interface EmployeeRepository extends CrudRepository<Employees, String>{
+@Repository
+public interface EmployeeRepository extends CrudRepository<Employee, String>{
     
 }

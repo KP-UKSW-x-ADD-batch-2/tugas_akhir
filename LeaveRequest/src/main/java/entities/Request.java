@@ -63,7 +63,7 @@ public class Request implements Serializable {
     private String reason;
     @JoinColumn(name = "requester", referencedColumnName = "id")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    private Employees requester;
+    private Employee requester;
     @JoinColumn(name = "type", referencedColumnName = "id")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Type type;
@@ -128,11 +128,11 @@ public class Request implements Serializable {
         this.reason = reason;
     }
 
-    public Employees getRequester() {
+    public Employee getRequester() {
         return requester;
     }
 
-    public void setRequester(Employees requester) {
+    public void setRequester(Employee requester) {
         this.requester = requester;
     }
 

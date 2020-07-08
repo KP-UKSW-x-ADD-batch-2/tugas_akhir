@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Request Days Off</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div align="center">Request Form</div></br>
+        <form th:action="@{insert}" th:object="${req}" method="POST">
+            <div>
+                <br><label>Leave ID</label>
+<!--                <br><input type="" value=""/>-->
+                <br><input type="text" value="a" th:field="*{id}">
+                <br><label>Requester ID</label>
+<!--                <br><input th:field="*{as.requester}" type="text">-->
+                <br><label>Type Leave</label>
+<!--                <br><input value="${as.type}" type="text"/>-->
+                <br><label>Current Status</label>
+<!--                <br><input value="${as.currentStatus}"/>-->
+                <br><label>Days for leaving</label>
+                <br><label>Start Date</label>
+                <br><label>End Date</label>
+                <br><label>Reason for leaving</label>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.kp_CRUD_jar_0.0.1-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.kp.CRUD.enttites.Location</class>
+    <class>com.kp.CRUD.enttites.Country</class>
+    <class>com.kp.CRUD.enttites.Region</class>
+    <class>com.kp.CRUD.enttites.Departement</class>
+    <class>com.kp.CRUD.enttites.JobHistory</class>
+    <class>com.kp.CRUD.enttites.Account</class>
+    <class>com.kp.CRUD.enttites.Employee</class>
+    <class>com.kp.CRUD.enttites.Job</class>
+    <class>com.kp.crud.entities.AccountRoles</class>
+    <class>com.kp.crud.entities.Employees</class>
+    <class>com.kp.crud.entities.Roles</class>
+    <class>com.kp.crud.entities.Types</class>
+    <class>com.kp.crud.entities.Reports</class>
+    <class>com.kp.crud.entities.Parameters</class>
+    <class>com.kp.crud.entities.Statuses</class>
+    <class>com.kp.crud.entities.PublicHolidays</class>
+    <class>com.kp.crud.entities.Accounts</class>
+    <class>com.kp.crud.entities.Requests</class>
+    <class>com.kp.crud.entities.AccountRole</class>
+    <class>com.kp.crud.entities.Account</class>
+    <class>com.kp.crud.entities.Status</class>
+    <class>com.kp.crud.entities.Role</class>
+    <class>com.kp.crud.entities.Parameter</class>
+    <class>com.kp.crud.entities.Report</class>
+    <class>com.kp.crud.entities.Employee</class>
+    <class>com.kp.crud.entities.Type</class>
+    <class>com.kp.crud.entities.PublicHoliday</class>
+    <class>com.kp.crud.entities.Request</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tugas_2?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>

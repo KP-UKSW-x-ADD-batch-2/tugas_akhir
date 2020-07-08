@@ -9,9 +9,9 @@
     <class>entities.AccountRole</class>
     <class>entities.Report</class>
     <class>entities.Request</class>
-    <class>entities.Employees</class>
     <class>entities.Account</class>
     <class>entities.Parameter</class>
+    <class>entities.Employee</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db_project_akhir?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
