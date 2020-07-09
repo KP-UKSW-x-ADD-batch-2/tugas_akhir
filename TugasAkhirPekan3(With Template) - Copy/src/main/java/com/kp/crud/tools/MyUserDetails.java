@@ -5,6 +5,7 @@
  */
 package com.kp.crud.tools;
 
+import com.kp.crud.entities.Account;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,16 +17,18 @@ import java.util.stream.Collectors;
 
 public class MyUserDetails implements UserDetails {
 
-    private String userName;
+    private String username;
     private String password;
-    private boolean active;
+    private String verifyCode;
+    private boolean isActive;
+    private boolean isDeleted;
     private List<GrantedAuthority> authorities;
 
-    public MyUserDetails(User user) {
-        this.userName = user.getUserName();
-        this.password = user.getPassword();
-        this.active = user.isActive();
-        this.authorities = Arrays.stream(user.getRoles().split(","))
+    public MyUserDetails(Account account) {
+        this.username = account.getUsername();
+        this.password = account.getPassword();
+        this.isActive = account.getIsActive();
+        this.authorities = Arrays.stream(account.getAccountRoleList().spliterator()
                     .map(SimpleGrantedAuthority::new)
                     .collect(Collectors.toList());
     }
@@ -42,7 +45,7 @@ public class MyUserDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return username;
     }
 
     @Override
@@ -62,6 +65,6 @@ public class MyUserDetails implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return active;
+        return isActive;
     }
 }
